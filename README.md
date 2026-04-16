@@ -1,1 +1,65 @@
-# Simple-Bank-System
+# 🏦 Bank Management System (Professional CLI)
+
+A professional-grade **Bank Management System** featuring a multi-user environment with an integrated **Permissions System**.
+This application allows administrators to manage clients and bank staff (users) with specific access levels,
+ensuring secure financial operations.
+
+## 🌟 Key Features
+
+### 👤 User & Permission Management
+
+- **Role-Based Access Control:** Assign specific permissions to users (e.g., a user can find clients but cannot delete them).
+- **Full Access vs. Limited Access:** Support for admin accounts (`-1` permission) and restricted staff accounts.
+- **User CRUD:** Add, Delete, Update, and Find bank users stored in `Users.txt`.
+
+ ### 📂 Client Operations (CRUD)
+
+- **Comprehensive Management:** Full control over client records (List, Add, Delete, Update, Find).
+- **Duplicate Prevention:** Automatic checks to ensure Account Numbers and Usernames are unique.
+
+ ### 💰 Transactions Module
+
+- **Deposit/Withdraw:** Process financial transactions and update balances instantly.
+- **Total Balances:** View the sum of all client balances across the bank.
+
+ ### 🛡️ Security & Validation
+
+- **Login Screen:** Requires valid credentials from `Users.txt` to enter the system.
+- **Access Control:** Integrated `CheckAccessPermission` function that blocks unauthorized users from specific menus.
+
+## 🛠️ Technical Highlights
+- **Data Structures**: Extensive use of `std::vector` for dynamic memory management and `struct` for data modeling.
+- **File I/O**: Custom-built functions to convert records to lines and vice versa using string delimiters (`#//#`).
+- **Enums for Navigation**: Clean and readable menu navigation using `enum` types.
+- **Input Validation**: Secure input handling to prevent account duplication and invalid operations.
+
+## 📂 System Architecture
+The project is structured to separate data logic from UI:
+- **Models**: `sClient` and `stUser` structures.
+- **Core Logic**: String splitting, record conversion, and file synchronization.
+- **Security**: A login system that verifies credentials and checks permissions before granting access.
+  
+ ### 📂 Data Structure Examples
+
+  #### `Users.txt`
+
+   `Username#//#Password#//#Permissions`
+   
+```
+Admin#//#1234#//#-1
+Employee1#//#pass01#//#3
+```
+
+  ### `Clients.txt`
+
+   `AccountNumber#//#PinCode#//#Name#//#Phone#//#Balance`
+   
+```
+A100#//#4444#//#Alice Smith#//#010203#//#6500.00
+```
+
+---
+## 🚀 How to Use
+1. **Compilation**: Use any C++ compiler (G++, MSVC, etc.)
+   ```bash
+   g++ main.cpp -o BankSystem
