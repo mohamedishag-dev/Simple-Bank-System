@@ -59,7 +59,46 @@ A100#//#4444#//#Alice Smith#//#010203#//#6500.00
 ```
 
 ---
-## 🚀 How to Use
-1. **Compilation**: Use any C++ compiler (G++, MSVC, etc.)
-   ```bash
-   g++ main.cpp -o BankSystem
+### 🛠️ How to Run
+Follow these steps to get the system up and running on your local machine:
+#### 1 Prerequisites
+Ensure you have a C++ compiler installed:
+- **Windows**: MinGW, Visual Studio, or Clion.
+- **Linux/Mac**: GCC (g++) or Clang.
+
+#### 2. File Preparation
+Make sure the following data files exist in the same directory as your source code (or the ```/data``` folder as per your structure):
+- ```Clients.txt```
+- ```Users.txt``` (Ensure it contains at least one Admin user: ```Admin#//#1234#//#-1```)
+
+#### 3. Compilation
+
+Open your terminal or command prompt and navigate to the project folder, then run:
+
+`bash`
+```
+g++ main.cpp -o BankSystem
+```
+#### 4. Execution
+
+Run the generated executable file:
+
+**Windows**:
+`bash`
+
+```
+BankSystem.exe
+```
+
+**Linux/Mac**:
+`bash`
+
+```
+./BankSystem
+```
+
+#### 5. Login
+Use the default credentials to access the system:
+- Username: ```Admin```
+- Password: ```1234```
+
