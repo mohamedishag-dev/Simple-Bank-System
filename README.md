@@ -101,4 +101,20 @@ BankSystem.exe
 Use the default credentials to access the system:
 - Username: ```Admin```
 - Password: ```1234```
-
+## 📁 Project Structure
+```
+Simple-Bank-System/
+|
+├── src/
+|    ├── main.cpp
+|    ├── bank_logic.cpp
+|    └── bank_logic.h
+|
+├── include/
+|    └── data/
+│       ├── Clients.txt
+│       └── Users.txt
+│
+├── docs/           # Documentation or diagrams
+└── README.md       # Project overview
+```
